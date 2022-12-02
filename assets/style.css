@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Chating;
+    color: white;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #222;
+}
+
+@font-face {
+    font-family: Chating;
+    src: url(./fonts/Roboto-Medium.ttf);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.wrapper .chat {
+    list-style: none;
+    padding: 10px;
+    height: 100%;
+}
+
+.wrapper .chat li {
+    background: #2e2e2e;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    animation: showLi .3s ease;
+}
+
+@keyframes showLi {
+    from {
+        opacity: 0;
+        transform: rotateX(90deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+.wrapper .chat li .name {
+    color: #ccc;
+}
+
+.wrapper form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    height: 50px;
+    padding: 5px;
+}
+
+input {
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    border: none;
+    background-color: #2e2e2e;
+    outline: none;
+    padding-left: 10px;
+}
+
+.send {
+    border: none;
+    background: orange;
+    outline: none;
+    height: 100%;
+    padding: 0 15px;
+    border-radius: 100px;
+    transition: .3s ease;
+}
+
+.wrapper .form .send:hover {
+    background: rgb(255, 187, 60);
+}
